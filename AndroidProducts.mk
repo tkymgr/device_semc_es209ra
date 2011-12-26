@@ -1,3 +1,3 @@
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/es209ra.mk
+    $(LOCAL_DIR)/full_es209ra.mk

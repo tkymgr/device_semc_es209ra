@@ -21,7 +21,7 @@ LOCAL_PATH := $(call my-dir)
 ifneq ($(strip $(TARGET_NO_BOOTLOADER)),true)
 
 # Compile
-include bootable/bootloader/lk/AndroidBoot.mk
+#include bootable/bootloader/lk/AndroidBoot.mk
 
 INSTALLED_BOOTLOADER_TARGET := $(PRODUCT_OUT)/bootloader
 file := $(INSTALLED_BOOTLOADER_TARGET)
@@ -63,6 +63,7 @@ $(file) : $(LOCAL_PATH)/8k_handset.kl | $(ACP)
 
 include $(CLEAR_VARS)
 LOCAL_SRC_FILES := racheal_keypad.kcm
+LOCAL_MODULE_TAGS := optional
 include $(BUILD_KEY_CHAR_MAP)
 
 file := $(TARGET_OUT)/etc/vold.fstab

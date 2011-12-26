@@ -12,17 +12,18 @@ PRODUCT_COPY_FILES := \
     frameworks/base/data/etc/android.hardware.location.xml:system/etc/permissions/android.hardware.location.xml \
     frameworks/base/data/etc/android.hardware.location.gps.xml:system/etc/permissions/android.hardware.location.gps.xml \
     frameworks/base/data/etc/android.hardware.touchscreen.xml:system/etc/permissions/android.hardware.touchscreen.xml \
-    frameworks/base/data/etc/android.hardware.bluetooth.xml:system/etc/permissions/android.hardware.bluetooth.xml \
 
 PRODUCT_COPY_FILES += \
     packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:system/etc/permissions/android.software.live_wallpaper.xml
 
-$(call inherit-product, build/target/product/generic.mk)
+#$(call inherit-product, build/target/product/generic.mk)
 
 #Enabling Ring Tones
-include frameworks/base/data/sounds/OriginalAudio.mk
+#include frameworks/base/data/sounds/OriginalAudio.mk
 
 # Overrides
-PRODUCT_BRAND := semc
-PRODUCT_NAME := X10i
+PRODUCT_NAME := es209ra
 PRODUCT_DEVICE := es209ra
+PRODUCT_BRAND := semc
+PRODUCT_MODEL := X10i
+PRODUCT_MANUFACTURER := Sony Ericsson
