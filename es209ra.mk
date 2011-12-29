@@ -16,10 +16,11 @@ PRODUCT_COPY_FILES := \
 PRODUCT_COPY_FILES += \
     packages/wallpapers/LivePicker/android.software.live_wallpaper.xml:system/etc/permissions/android.software.live_wallpaper.xml
 
-#$(call inherit-product, build/target/product/generic.mk)
-
-#Enabling Ring Tones
-#include frameworks/base/data/sounds/OriginalAudio.mk
+# See comment at the top of this file. This is where the other
+# half of the device-specific product definition file takes care
+# of the aspects that require proprietary drivers that aren't
+# commonly available
+$(call inherit-product-if-exists, vendor/semc/es209ra/device-vendor.mk)
 
 # Overrides
 PRODUCT_NAME := es209ra

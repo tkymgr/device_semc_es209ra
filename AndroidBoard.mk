@@ -63,7 +63,7 @@ $(file) : $(LOCAL_PATH)/8k_handset.kl | $(ACP)
 
 include $(CLEAR_VARS)
 LOCAL_SRC_FILES := racheal_keypad.kcm
-LOCAL_MODULE_TAGS := optional
+LOCAL_MODULE_TAGS := eng
 include $(BUILD_KEY_CHAR_MAP)
 
 file := $(TARGET_OUT)/etc/vold.fstab
