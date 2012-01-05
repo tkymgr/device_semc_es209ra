@@ -51,20 +51,15 @@ ALL_PREBUILT += $(file)
 $(file) : $(TARGET_PREBUILT_KERNEL) | $(ACP)
 	$(transform-prebuilt-to-target)
 
-file := $(TARGET_OUT_KEYLAYOUT)/racheal_keypad.kl
+file := $(TARGET_OUT_KEYLAYOUT)/es209ra_keypad.kl
 ALL_PREBUILT += $(file)
-$(file) : $(LOCAL_PATH)/racheal_keypad.kl | $(ACP)
+$(file) : $(LOCAL_PATH)/es209ra_keypad.kl | $(ACP)
 	$(transform-prebuilt-to-target)
 
-file := $(TARGET_OUT_KEYLAYOUT)/8k_handset.kl
+file := $(TARGET_OUT_KEYLAYOUT)/es209ra_handset.kl
 ALL_PREBUILT += $(file)
-$(file) : $(LOCAL_PATH)/8k_handset.kl | $(ACP)
+$(file) : $(LOCAL_PATH)/es209ra_handset.kl | $(ACP)
 	$(transform-prebuilt-to-target)
-
-include $(CLEAR_VARS)
-LOCAL_SRC_FILES := racheal_keypad.kcm
-LOCAL_MODULE_TAGS := eng
-include $(BUILD_KEY_CHAR_MAP)
 
 file := $(TARGET_OUT)/etc/vold.fstab
 ALL_PREBUILT += $(file)
